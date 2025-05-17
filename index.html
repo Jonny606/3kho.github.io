@@ -1,33 +1,168 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <meta name="keywords" content="front-end web developer, unblocked, games, google sites, unblocked games mom, ublocked, code, coding, programmer, development, javascript, jquery, bootstrap, sass, less, git" />
-    <meta property="og:title" content="Welcome to 3kh0 lite, a lightweight, fast, and clean game site." />
-    <meta property="og:site_name" content="3kh0.github.io" />
-    <meta property="og:description" content="Welcome to 3kh0 lite, a lightweight, fast, and clean game site." />
-    <meta name="description" content="Welcome to 3kh0 lite, a lightweight, fast, and clean game site." />
-    <meta name="author" content="3kh0" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>3kh0 lite</title>
-  </head>
-  <body style="background-color: #121212; color: #ffffff; font-family: sans-serif; margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh;">
-    <h1 style="font-size: 3em; text-align: center;">
-      3kh0 lite
-    </h1>
-    <span id="subtitle" style="font-size: 1.5em;">...</span>
-    <p style="text-align: center; max-width: 600px; margin: 20px auto;">
-      Welcome to 3kh0 lite, a lightweight, lightning fast, and simple game site.<br />
-      <a href="/projects.html" style="text-decoration: none;"><button style="cursor: pointer; background-color: #22c55e; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; border-radius: 20px; margin-top: 20px;">Start playing!</button></a><br />
-      <br />
-      <a href="/misc.html" style="text-decoration: none;"><button style="cursor: pointer; background-color: #b625cc; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; border-radius: 20px; margin-top: 5px;">Tools and settings</button></a>
-    </p>
-    <p style="text-align: center; max-width: 600px; margin: 20px auto;">
-        &copy; 3kh0, 2024. All rights reserved. You are welcome to use and/or duplicate material from the <a href="https://github.com/3kh0/3kh0-lite" style="color: #22c55e;">GitHub repository</a> with proper credit to 3kh0.<br /><br />
-        Contact Echo at <a href="mailto:echo-the-coder@tuta.io" style="color: #22c55e;">echo-the-coder@tuta.io</a>.
-    </p>
-    <script src="/js/main.js"></script>
-    <script src="/js/subtitle.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>3kh0 lite - Yo-Yo Cheat Button Test</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <meta name="keywords" content="front-end web developer, unblocked, games, google sites, unblocked games mom, ublocked, code, coding, programmer, development, javascript, jquery, bootstrap, sass, less, git" />
+  <meta property="og:title" content="Welcome to 3kh0 lite, a lightweight, fast, and clean game site." />
+  <meta property="og:site_name" content="3kh0.github.io" />
+  <meta property="og:description" content="Welcome to 3kh0 lite, a lightweight, fast, and clean game site." />
+  <meta name="description" content="Welcome to 3kh0 lite, a lightweight, fast, and clean game site." />
+  <meta name="author" content="3kh0" />
+  <style>
+    body {
+      background-color: #121212;
+      color: #fff;
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    /* Cheat button styling */
+    #cheatButton {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 9999;
+      padding: 10px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 0.9em;
+    }
+
+    /* 3kh0 lite main buttons */
+    .main-button {
+      cursor: pointer;
+      background-color: #22c55e;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 20px;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+    .main-button:hover {
+      background-color: #1ea148;
+    }
+    .tools-button {
+      background-color: #b625cc;
+      margin-top: 5px;
+    }
+    .tools-button:hover {
+      background-color: #991aa8;
+    }
+
+    h1 {
+      font-size: 3em;
+      text-align: center;
+      margin-bottom: 0.1em;
+    }
+    #subtitle {
+      font-size: 1.5em;
+      margin-bottom: 1em;
+    }
+    p.description {
+      text-align: center;
+      max-width: 600px;
+      margin: 20px auto;
+      line-height: 1.4em;
+    }
+    p.footer {
+      text-align: center;
+      max-width: 600px;
+      margin: 20px auto 40px auto;
+      font-size: 0.9em;
+      color: #bbb;
+    }
+    p.footer a {
+      color: #22c55e;
+      text-decoration: none;
+    }
+    p.footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>3kh0 lite</h1>
+  <span id="subtitle">...</span>
+
+  <p class="description">
+    Welcome to 3kh0 lite, a lightweight, lightning fast, and simple game site.<br />
+    <a href="/projects.html" style="text-decoration: none;">
+      <button class="main-button">Start playing!</button>
+    </a><br />
+    <a href="/misc.html" style="text-decoration: none;">
+      <button class="main-button tools-button">Tools and settings</button>
+    </a>
+  </p>
+
+  <p class="footer">
+    &copy; 3kh0, 2024. All rights reserved. You are welcome to use and/or duplicate material from the <a href="https://github.com/3kh0/3kh0-lite">GitHub repository</a> with proper credit to 3kh0.<br /><br />
+    Contact Echo at <a href="mailto:echo-the-coder@tuta.io">echo-the-coder@tuta.io</a>.
+  </p>
+
+  <!-- Cheat Button -->
+  <button id="cheatButton" title="Add infinite coach credits and coins">
+    Give Infinite Coach Credits & Coins
+  </button>
+
+  <!-- External JS scripts -->
+  <script src="/js/main.js"></script>
+  <script src="/js/subtitle.js"></script>
+
+  <script>
+    // Cheat button logic
+    document.getElementById('cheatButton').addEventListener('click', function () {
+      const saveKey = "RetroBowl.0.savedata.ini";
+      let savedData = localStorage.getItem(saveKey);
+
+      if (!savedData) {
+        alert("No save data found. Please start a new game first.");
+        return;
+      }
+
+      const newCredits = "999999999";
+      const newCoins = "999999999";
+
+      let updatedData = savedData.replace(/coach_credit="\d+"/g, `coach_credit="${newCredits}"`);
+      updatedData = updatedData.replace(/coins="\d+"/g, `coins="${newCoins}"`);
+
+      if (updatedData === savedData) {
+        alert("No coach credits or coins found to update.");
+        return;
+      }
+
+      localStorage.setItem(saveKey, updatedData);
+      alert("Infinite coach credits and coins granted! The Retro Bowl page will reload now.");
+
+      const retroBowlUrl = "https://www.retro-bowl.com/";
+
+      if (window.location.href.startsWith(retroBowlUrl)) {
+        setTimeout(() => window.location.reload(), 1000);
+      } else {
+        setTimeout(() => window.location.href = retroBowlUrl, 1000);
+      }
+    });
+
+    // Optional: Your existing subtitle.js or main.js might update the subtitle
+  </script>
+
+</body>
 </html>
